@@ -1,0 +1,7 @@
+name = "Cangjie"
+grammar = "cangjie"
+path_suffixes = ["cj"]
+line_comments = ["// "]
+block_comment = ["/* ", " */"]
+tab_size = 4
+hard_tabs = false

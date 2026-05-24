@@ -1,0 +1,15 @@
+id = "cangjie"
+name = "Cangjie"
+version = "1.0.5"
+schema_version = 1
+description = "Cangjie language support for Zed"
+authors = ["Goway_Hui <19168370426@163.com>"]
+repository = "https://gitcode.com/Goway_Hui/CangjieTreeSitter"
+
+[grammars.cangjie]
+repository = "https://gitcode.com/Goway_Hui/CangjieTreeSitter"
+rev = "4cbcabbce2a3d4a090bd18f84c2eb024cecb4557"
+
+[language_servers.cangjie-lsp]
+name = "Cangjie LSP"
+languages = ["Cangjie"]

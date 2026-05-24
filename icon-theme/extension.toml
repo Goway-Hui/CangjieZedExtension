@@ -1,0 +1,8 @@
+id = "cangjie-icon-theme"
+name = "Cangjie File Icons"
+version = "1.0.5"
+schema_version = 1
+description = "Material Design file icons with Cangjie language icon"
+authors = ["Goway_Hui <19168370426@163.com>"]
+repository = "https://gitcode.com/Goway_Hui/CangjieTreeSitter"
+icon_themes = ["icon_themes/cangjie"]

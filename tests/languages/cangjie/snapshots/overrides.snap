@@ -1,0 +1,21 @@
+---
+source: tests/support/mod.rs
+assertion_line: 81
+expression: captures
+---
+- name: string.inclusive
+  line: 15
+  column: 16
+  text: "\"Hello, ${name}!\""
+- name: string.inclusive
+  line: 28
+  column: 30
+  text: "\"World\""
+- name: string.inclusive
+  line: 30
+  column: 13
+  text: "\"Total instances: ${MainClass.getCount()}\""
+- name: string.inclusive
+  line: 69
+  column: 17
+  text: "\"Point at (${x}, ${y})\""

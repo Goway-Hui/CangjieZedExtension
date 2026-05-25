@@ -1,0 +1,6 @@
+---
+source: tests/support/mod.rs
+assertion_line: 81
+expression: captures
+---
+[]

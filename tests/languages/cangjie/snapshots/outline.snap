@@ -1,0 +1,149 @@
+---
+source: tests/support/mod.rs
+assertion_line: 81
+expression: captures
+---
+- name: item
+  line: 7
+  column: 1
+  text: "struct DataPoint {\n    var label: String\n    var value: Float64\n}"
+- name: name
+  line: 7
+  column: 8
+  text: DataPoint
+- name: item
+  line: 8
+  column: 5
+  text: "var label: String"
+- name: name
+  line: 8
+  column: 9
+  text: label
+- name: item
+  line: 9
+  column: 5
+  text: "var value: Float64"
+- name: name
+  line: 9
+  column: 9
+  text: value
+- name: item
+  line: 13
+  column: 1
+  text: "interface DataProcessor {\n    func process(data: DataPoint): DataPoint\n}"
+- name: name
+  line: 13
+  column: 11
+  text: DataProcessor
+- name: item
+  line: 14
+  column: 5
+  text: "func process(data: DataPoint): DataPoint"
+- name: name
+  line: 14
+  column: 10
+  text: process
+- name: item
+  line: 18
+  column: 1
+  text: "enum Status {\n    | Ok\n    | Warning(String)\n    | Error(Int64)\n}"
+- name: name
+  line: 18
+  column: 6
+  text: Status
+- name: item
+  line: 24
+  column: 1
+  text: "class DataPipeline {\n    var points: ArrayList<DataPoint>\n\n    public init() {\n        this.points = ArrayList<DataPoint>()\n    }\n\n    public func addPoint(p: DataPoint): Unit {\n        points.add(p)\n    }\n\n    public prop length: Int64 {\n        get() {\n            return points.size\n        }\n    }\n\n    public func processAll(processor: DataProcessor): Unit {\n        for (i in 0..points.size) {\n            if (let Some(p) <- points.get(i)) {\n                let processed = processor.process(p)\n                points[i] = processed\n            }\n        }\n    }\n\n    static init() {\n        println(\"DataPipeline initialized\")\n    }\n\n    ~init() {\n        println(\"DataPipeline destroyed\")\n    }\n}"
+- name: name
+  line: 24
+  column: 7
+  text: DataPipeline
+- name: item
+  line: 25
+  column: 5
+  text: "var points: ArrayList<DataPoint>"
+- name: name
+  line: 25
+  column: 9
+  text: points
+- name: item
+  line: 27
+  column: 5
+  text: "public init() {\n        this.points = ArrayList<DataPoint>()\n    }"
+- name: item
+  line: 31
+  column: 5
+  text: "public func addPoint(p: DataPoint): Unit {\n        points.add(p)\n    }"
+- name: name
+  line: 31
+  column: 17
+  text: addPoint
+- name: item
+  line: 35
+  column: 5
+  text: "public prop length: Int64 {\n        get() {\n            return points.size\n        }\n    }"
+- name: name
+  line: 35
+  column: 17
+  text: length
+- name: item
+  line: 41
+  column: 5
+  text: "public func processAll(processor: DataProcessor): Unit {\n        for (i in 0..points.size) {\n            if (let Some(p) <- points.get(i)) {\n                let processed = processor.process(p)\n                points[i] = processed\n            }\n        }\n    }"
+- name: name
+  line: 41
+  column: 17
+  text: processAll
+- name: item
+  line: 44
+  column: 17
+  text: let processed = processor.process(p)
+- name: name
+  line: 44
+  column: 21
+  text: processed
+- name: item
+  line: 50
+  column: 5
+  text: "static init() {\n        println(\"DataPipeline initialized\")\n    }"
+- name: item
+  line: 59
+  column: 10
+  text: "func +(a: DataPoint, b: DataPoint): DataPoint {\n    return DataPoint(\"${a.label}+${b.label}\", a.value + b.value)"
+- name: name
+  line: 60
+  column: 12
+  text: DataPoint
+- name: item
+  line: 63
+  column: 1
+  text: "type PointMap = HashMap<String, DataPoint>"
+- name: name
+  line: 63
+  column: 6
+  text: PointMap
+- name: item
+  line: 65
+  column: 1
+  text: "macro debugLog(msg: String) {\n    println(\"[DEBUG] ${msg}\")\n}"
+- name: name
+  line: 65
+  column: 7
+  text: debugLog
+- name: item
+  line: 69
+  column: 1
+  text: "extend DataPoint {\n    public func describe(): String {\n        return \"${label}: ${value}\"\n    }\n}"
+- name: name
+  line: 69
+  column: 8
+  text: DataPoint
+- name: item
+  line: 70
+  column: 5
+  text: "public func describe(): String {\n        return \"${label}: ${value}\"\n    }"
+- name: name
+  line: 70
+  column: 17
+  text: describe

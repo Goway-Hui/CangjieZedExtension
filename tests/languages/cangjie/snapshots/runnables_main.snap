@@ -1,0 +1,57 @@
+---
+source: tests/support/mod.rs
+assertion_line: 81
+expression: captures
+---
+- name: run
+  line: 5
+  column: 7
+  text: MainClass
+- name: cangjie_class_name
+  line: 5
+  column: 7
+  text: MainClass
+- name: run
+  line: 14
+  column: 17
+  text: greet
+- name: cangjie_test_name
+  line: 14
+  column: 17
+  text: greet
+- name: run
+  line: 18
+  column: 17
+  text: getName
+- name: cangjie_test_name
+  line: 18
+  column: 17
+  text: getName
+- name: run
+  line: 22
+  column: 17
+  text: getCount
+- name: cangjie_test_name
+  line: 22
+  column: 17
+  text: getCount
+- name: run
+  line: 27
+  column: 1
+  text: "main() {\n    let instance = MainClass(\"World\")\n    println(instance.greet())\n    println(\"Total instances: ${MainClass.getCount()}\")\n}"
+- name: run
+  line: 73
+  column: 7
+  text: Circle
+- name: cangjie_class_name
+  line: 73
+  column: 7
+  text: Circle
+- name: run
+  line: 81
+  column: 26
+  text: distance
+- name: cangjie_test_name
+  line: 81
+  column: 26
+  text: distance

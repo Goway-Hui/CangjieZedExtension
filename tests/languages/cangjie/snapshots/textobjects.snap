@@ -1,0 +1,233 @@
+---
+source: tests/support/mod.rs
+assertion_line: 81
+expression: captures
+---
+- name: class.around
+  line: 5
+  column: 1
+  text: "class MainClass {\n    var name: String\n    static var count: Int64 = 0\n\n    public init(name: String) {\n        this.name = name\n        count += 1\n    }\n\n    public func greet(): String {\n        return \"Hello, ${name}!\"\n    }\n\n    public func getName(): String {\n        return name\n    }\n\n    static func getCount(): Int64 {\n        return count\n    }\n}"
+- name: class.inside
+  line: 5
+  column: 17
+  text: "{\n    var name: String\n    static var count: Int64 = 0\n\n    public init(name: String) {\n        this.name = name\n        count += 1\n    }\n\n    public func greet(): String {\n        return \"Hello, ${name}!\"\n    }\n\n    public func getName(): String {\n        return name\n    }\n\n    static func getCount(): Int64 {\n        return count\n    }\n}"
+- name: parameter.around
+  line: 9
+  column: 16
+  text: "(name: String)"
+- name: parameter.inside
+  line: 9
+  column: 17
+  text: "name: String"
+- name: function.around
+  line: 9
+  column: 5
+  text: "public init(name: String) {\n        this.name = name\n        count += 1\n    }"
+- name: function.inside
+  line: 9
+  column: 31
+  text: "{\n        this.name = name\n        count += 1\n    }"
+- name: parameter.around
+  line: 14
+  column: 22
+  text: ()
+- name: function.around
+  line: 14
+  column: 5
+  text: "public func greet(): String {\n        return \"Hello, ${name}!\"\n    }"
+- name: function.inside
+  line: 14
+  column: 33
+  text: "{\n        return \"Hello, ${name}!\"\n    }"
+- name: parameter.around
+  line: 18
+  column: 24
+  text: ()
+- name: function.around
+  line: 18
+  column: 5
+  text: "public func getName(): String {\n        return name\n    }"
+- name: function.inside
+  line: 18
+  column: 35
+  text: "{\n        return name\n    }"
+- name: parameter.around
+  line: 22
+  column: 25
+  text: ()
+- name: function.around
+  line: 22
+  column: 5
+  text: "static func getCount(): Int64 {\n        return count\n    }"
+- name: function.inside
+  line: 22
+  column: 35
+  text: "{\n        return count\n    }"
+- name: parameter.around
+  line: 27
+  column: 5
+  text: ()
+- name: function.around
+  line: 27
+  column: 1
+  text: "main() {\n    let instance = MainClass(\"World\")\n    println(instance.greet())\n    println(\"Total instances: ${MainClass.getCount()}\")\n}"
+- name: function.inside
+  line: 27
+  column: 8
+  text: "{\n    let instance = MainClass(\"World\")\n    println(instance.greet())\n    println(\"Total instances: ${MainClass.getCount()}\")\n}"
+- name: parameter.around
+  line: 33
+  column: 12
+  text: ()
+- name: function.around
+  line: 33
+  column: 1
+  text: "func helper(): Bool {\n    return true\n}"
+- name: function.inside
+  line: 33
+  column: 21
+  text: "{\n    return true\n}"
+- name: class.around
+  line: 37
+  column: 1
+  text: "struct Point {\n    var x: Float64\n    var y: Float64\n\n    public init(x: Float64, y: Float64) {\n        this.x = x\n        this.y = y\n    }\n\n    public func distance(): Float64 {\n        return (x ** 2.0 + y ** 2.0) ** 0.5\n    }\n\n    mut func translate(dx: Float64, dy: Float64): Unit {\n        x += dx\n        y += dy\n    }\n}"
+- name: class.inside
+  line: 37
+  column: 14
+  text: "{\n    var x: Float64\n    var y: Float64\n\n    public init(x: Float64, y: Float64) {\n        this.x = x\n        this.y = y\n    }\n\n    public func distance(): Float64 {\n        return (x ** 2.0 + y ** 2.0) ** 0.5\n    }\n\n    mut func translate(dx: Float64, dy: Float64): Unit {\n        x += dx\n        y += dy\n    }\n}"
+- name: parameter.around
+  line: 41
+  column: 16
+  text: "(x: Float64, y: Float64)"
+- name: parameter.inside
+  line: 41
+  column: 17
+  text: "x: Float64"
+- name: parameter.inside
+  line: 41
+  column: 29
+  text: "y: Float64"
+- name: function.around
+  line: 41
+  column: 5
+  text: "public init(x: Float64, y: Float64) {\n        this.x = x\n        this.y = y\n    }"
+- name: function.inside
+  line: 41
+  column: 41
+  text: "{\n        this.x = x\n        this.y = y\n    }"
+- name: parameter.around
+  line: 46
+  column: 25
+  text: ()
+- name: function.around
+  line: 46
+  column: 5
+  text: "public func distance(): Float64 {\n        return (x ** 2.0 + y ** 2.0) ** 0.5\n    }"
+- name: function.inside
+  line: 46
+  column: 37
+  text: "{\n        return (x ** 2.0 + y ** 2.0) ** 0.5\n    }"
+- name: parameter.around
+  line: 50
+  column: 23
+  text: "(dx: Float64, dy: Float64)"
+- name: parameter.inside
+  line: 50
+  column: 24
+  text: "dx: Float64"
+- name: parameter.inside
+  line: 50
+  column: 37
+  text: "dy: Float64"
+- name: function.around
+  line: 50
+  column: 5
+  text: "mut func translate(dx: Float64, dy: Float64): Unit {\n        x += dx\n        y += dy\n    }"
+- name: function.inside
+  line: 50
+  column: 56
+  text: "{\n        x += dx\n        y += dy\n    }"
+- name: class.around
+  line: 56
+  column: 1
+  text: "interface Drawable {\n    func draw(): Unit\n}"
+- name: class.inside
+  line: 57
+  column: 5
+  text: "func draw(): Unit\n"
+- name: parameter.around
+  line: 57
+  column: 14
+  text: ()
+- name: class.around
+  line: 60
+  column: 1
+  text: "enum Color {\n    | Red\n    | Green\n    | Blue\n    | Custom(Float64, Float64, Float64)\n}"
+- name: class.inside
+  line: 60
+  column: 12
+  text: "{\n    | Red\n    | Green\n    | Blue\n    | Custom(Float64, Float64, Float64)\n}"
+- name: class.around
+  line: 67
+  column: 1
+  text: "extend Point <: Drawable {\n    public func draw(): Unit {\n        println(\"Point at (${x}, ${y})\")\n    }\n}"
+- name: class.inside
+  line: 67
+  column: 26
+  text: "{\n    public func draw(): Unit {\n        println(\"Point at (${x}, ${y})\")\n    }\n}"
+- name: parameter.around
+  line: 68
+  column: 21
+  text: ()
+- name: function.around
+  line: 68
+  column: 5
+  text: "public func draw(): Unit {\n        println(\"Point at (${x}, ${y})\")\n    }"
+- name: function.inside
+  line: 68
+  column: 30
+  text: "{\n        println(\"Point at (${x}, ${y})\")\n    }"
+- name: class.around
+  line: 73
+  column: 1
+  text: "class Circle <: Point {\n    var radius: Float64\n\n    public init(x: Float64, y: Float64, radius: Float64) {\n        super.init(x, y)\n        this.radius = radius\n    }\n\n    public override func distance(): Float64 {\n        return radius\n    }\n}"
+- name: class.inside
+  line: 73
+  column: 23
+  text: "{\n    var radius: Float64\n\n    public init(x: Float64, y: Float64, radius: Float64) {\n        super.init(x, y)\n        this.radius = radius\n    }\n\n    public override func distance(): Float64 {\n        return radius\n    }\n}"
+- name: parameter.around
+  line: 76
+  column: 16
+  text: "(x: Float64, y: Float64, radius: Float64)"
+- name: parameter.inside
+  line: 76
+  column: 17
+  text: "x: Float64"
+- name: parameter.inside
+  line: 76
+  column: 29
+  text: "y: Float64"
+- name: parameter.inside
+  line: 76
+  column: 41
+  text: "radius: Float64"
+- name: function.around
+  line: 76
+  column: 5
+  text: "public init(x: Float64, y: Float64, radius: Float64) {\n        super.init(x, y)\n        this.radius = radius\n    }"
+- name: function.inside
+  line: 76
+  column: 58
+  text: "{\n        super.init(x, y)\n        this.radius = radius\n    }"
+- name: parameter.around
+  line: 81
+  column: 34
+  text: ()
+- name: function.around
+  line: 81
+  column: 5
+  text: "public override func distance(): Float64 {\n        return radius\n    }"
+- name: function.inside
+  line: 81
+  column: 46
+  text: "{\n        return radius\n    }"

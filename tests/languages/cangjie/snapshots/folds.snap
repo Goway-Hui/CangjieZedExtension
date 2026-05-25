@@ -1,0 +1,129 @@
+---
+source: tests/support/mod.rs
+assertion_line: 81
+expression: captures
+---
+- name: fold
+  line: 5
+  column: 17
+  text: "{\n    var name: String\n    static var count: Int64 = 0\n\n    public init(name: String) {\n        this.name = name\n        count += 1\n    }\n\n    public func greet(): String {\n        return \"Hello, ${name}!\"\n    }\n\n    public func getName(): String {\n        return name\n    }\n\n    static func getCount(): Int64 {\n        return count\n    }\n}"
+- name: fold
+  line: 9
+  column: 16
+  text: "(name: String)"
+- name: fold
+  line: 9
+  column: 31
+  text: "{\n        this.name = name\n        count += 1\n    }"
+- name: fold
+  line: 14
+  column: 22
+  text: ()
+- name: fold
+  line: 14
+  column: 33
+  text: "{\n        return \"Hello, ${name}!\"\n    }"
+- name: fold
+  line: 18
+  column: 24
+  text: ()
+- name: fold
+  line: 18
+  column: 35
+  text: "{\n        return name\n    }"
+- name: fold
+  line: 22
+  column: 25
+  text: ()
+- name: fold
+  line: 22
+  column: 35
+  text: "{\n        return count\n    }"
+- name: fold
+  line: 27
+  column: 5
+  text: ()
+- name: fold
+  line: 27
+  column: 8
+  text: "{\n    let instance = MainClass(\"World\")\n    println(instance.greet())\n    println(\"Total instances: ${MainClass.getCount()}\")\n}"
+- name: fold
+  line: 33
+  column: 12
+  text: ()
+- name: fold
+  line: 33
+  column: 21
+  text: "{\n    return true\n}"
+- name: fold
+  line: 37
+  column: 14
+  text: "{\n    var x: Float64\n    var y: Float64\n\n    public init(x: Float64, y: Float64) {\n        this.x = x\n        this.y = y\n    }\n\n    public func distance(): Float64 {\n        return (x ** 2.0 + y ** 2.0) ** 0.5\n    }\n\n    mut func translate(dx: Float64, dy: Float64): Unit {\n        x += dx\n        y += dy\n    }\n}"
+- name: fold
+  line: 41
+  column: 16
+  text: "(x: Float64, y: Float64)"
+- name: fold
+  line: 41
+  column: 41
+  text: "{\n        this.x = x\n        this.y = y\n    }"
+- name: fold
+  line: 46
+  column: 25
+  text: ()
+- name: fold
+  line: 46
+  column: 37
+  text: "{\n        return (x ** 2.0 + y ** 2.0) ** 0.5\n    }"
+- name: fold
+  line: 50
+  column: 23
+  text: "(dx: Float64, dy: Float64)"
+- name: fold
+  line: 50
+  column: 56
+  text: "{\n        x += dx\n        y += dy\n    }"
+- name: fold
+  line: 57
+  column: 5
+  text: "func draw(): Unit\n"
+- name: fold
+  line: 57
+  column: 14
+  text: ()
+- name: fold
+  line: 60
+  column: 12
+  text: "{\n    | Red\n    | Green\n    | Blue\n    | Custom(Float64, Float64, Float64)\n}"
+- name: fold
+  line: 67
+  column: 26
+  text: "{\n    public func draw(): Unit {\n        println(\"Point at (${x}, ${y})\")\n    }\n}"
+- name: fold
+  line: 68
+  column: 21
+  text: ()
+- name: fold
+  line: 68
+  column: 30
+  text: "{\n        println(\"Point at (${x}, ${y})\")\n    }"
+- name: fold
+  line: 73
+  column: 23
+  text: "{\n    var radius: Float64\n\n    public init(x: Float64, y: Float64, radius: Float64) {\n        super.init(x, y)\n        this.radius = radius\n    }\n\n    public override func distance(): Float64 {\n        return radius\n    }\n}"
+- name: fold
+  line: 76
+  column: 16
+  text: "(x: Float64, y: Float64, radius: Float64)"
+- name: fold
+  line: 76
+  column: 58
+  text: "{\n        super.init(x, y)\n        this.radius = radius\n    }"
+- name: fold
+  line: 81
+  column: 34
+  text: ()
+- name: fold
+  line: 81
+  column: 46
+  text: "{\n        return radius\n    }"

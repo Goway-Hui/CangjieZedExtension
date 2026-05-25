@@ -1,5 +1,5 @@
 ; ============================================================
-; Cangjie Text Objects for Zed Vim Mode (v1.0.5 grammar)
+; Cangjie Text Objects for Zed Vim Mode
 ; ============================================================
 
 ; Classes and similar constructs
@@ -17,6 +17,8 @@
   (operatorFunctionDefinition (block) @function.inside)
   (mainDefinition (block) @function.inside)
   (macroDefinition (block) @function.inside)
+  (init (block) @function.inside)
+  (primaryInit (block) @function.inside)
 ] @function.around
 
 ; Loops
@@ -29,6 +31,10 @@
 ; Conditionals
 (ifExpression
   consequence: (block) @conditional.inside) @conditional.around
+
+; Match cases
+(matchCase
+  (matchCaseBody) @conditional.inside) @conditional.around
 
 ; Comments
 [

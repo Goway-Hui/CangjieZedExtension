@@ -1,5 +1,5 @@
 ; ============================================================
-; Cangjie Code Outline for Zed (v1.0.5 grammar)
+; Cangjie Code Outline for Zed
 ; ============================================================
 
 (classDefinition
@@ -23,6 +23,8 @@
 (operatorFunctionDefinition
   (operator) @name) @item
 
+(mainDefinition) @item
+
 (macroDefinition
   (macroName) @name) @item
 
@@ -34,3 +36,8 @@
 
 (variableDeclaration
   (variableName) @name) @item
+
+; Constructors
+(init) @item
+(primaryInit) @item
+(staticInit) @item

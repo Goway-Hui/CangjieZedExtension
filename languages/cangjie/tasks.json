@@ -1,0 +1,30 @@
+[
+  {
+    "label": "Run {cangjie_func_name}",
+    "command": "cjpm build && cjpm run",
+    "use_new_terminal": false,
+    "reveal": "always",
+    "tags": ["cangjie-main"]
+  },
+  {
+    "label": "Test {cangjie_test_name}",
+    "command": "cjpm test --filter $env:ZED_CUSTOM_cangjie_test_name",
+    "use_new_terminal": false,
+    "reveal": "always",
+    "tags": ["cangjie-test-method"]
+  },
+  {
+    "label": "Test class {cangjie_class_name}",
+    "command": "cjpm test --filter $env:ZED_CUSTOM_cangjie_class_name",
+    "use_new_terminal": false,
+    "reveal": "always",
+    "tags": ["cangjie-test-class"]
+  },
+  {
+    "label": "Run all tests",
+    "command": "cjpm test",
+    "use_new_terminal": false,
+    "reveal": "always",
+    "tags": ["cangjie-test-all"]
+  }
+]
